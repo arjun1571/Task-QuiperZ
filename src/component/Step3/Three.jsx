@@ -73,16 +73,17 @@ const Three = ({ next, previus }) => {
 
       // Console log the user's input
       console.log("User Input:", formData);
-      const jsonData = JSON.stringify(formData)
-      localStorage.setItem("setp Three value",jsonData)
+      const jsonData = JSON.stringify(formData);
+      localStorage.setItem("setp Three value", jsonData);
     } else {
-      // Handle validation errors
+      //   Handle validation errors
       console.log("Form contains errors");
     }
   };
 
   return (
     <div className="w-full p-3 bg-[#FDFDFD] rounded lg:h-[100vh]">
+      {/* title here  */}
       <div className="flex justify-start font-semibold p-4">
         <p className="text-[#D9D9D9] px-5">Step 1</p>
         <p className="text-[#D9D9D9] px-5">Step 2</p>
@@ -90,6 +91,7 @@ const Three = ({ next, previus }) => {
         <p className="text-[#D9D9D9] ">Step 4</p>
       </div>
       <hr />
+      {/* card information form section here  */}
       <form className="px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
         <h1 className="mb-5 text-2xl font-semibold">
           Payment Setup ($29/month)
@@ -102,12 +104,12 @@ const Three = ({ next, previus }) => {
             className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
               validationErrors.cardNumber ? "border-red-500" : ""
             }`}
-            type="text" // Change type to "text"
+            type="text"
             name="cardNumber"
             placeholder="Card number"
             value={formData.cardNumber}
             onChange={handleChange}
-            pattern="\d{16}" // Use pattern attribute for numeric input
+            pattern="\d{16}"
           />
           {validationErrors.cardNumber && (
             <p className="text-red-500 text-xs italic">
@@ -124,12 +126,12 @@ const Three = ({ next, previus }) => {
               className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
                 validationErrors.expiryMonth ? "border-red-500" : ""
               }`}
-              type="text" // Change type to "text"
+              type="text"
               name="expiryMonth"
               placeholder="00"
               value={formData.expiryMonth}
               onChange={handleChange}
-              pattern="\d{2}" // Use pattern attribute for numeric input
+              pattern="\d{2}"
             />
             {validationErrors.expiryMonth && (
               <p className="text-red-500 text-xs italic">
@@ -145,12 +147,12 @@ const Three = ({ next, previus }) => {
               className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
                 validationErrors.expiryYear ? "border-red-500" : ""
               }`}
-              type="text" // Change type to "text"
+              type="text"
               name="expiryYear"
               placeholder="0000"
               value={formData.expiryYear}
               onChange={handleChange}
-              pattern="\d{4}" // Use pattern attribute for numeric input
+              pattern="\d{4}"
             />
             {validationErrors.expiryYear && (
               <p className="text-red-500 text-xs italic">
@@ -166,12 +168,12 @@ const Three = ({ next, previus }) => {
               className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
                 validationErrors.cvv ? "border-red-500" : ""
               }`}
-              type="text" // Change type to "text"
+              type="text"
               name="cvv"
               placeholder="000"
               value={formData.cvv}
               onChange={handleChange}
-              pattern="\d{3}" // Use pattern attribute for numeric input
+              pattern="\d{3}"
             />
             {validationErrors.cvv && (
               <p className="text-red-500 text-xs italic">
@@ -199,13 +201,14 @@ const Three = ({ next, previus }) => {
           </button>
         </div>
       </form>
+      {/* card section list data here  */}
       <div className="lg:mx-12 bg-[#E6F0F6] rounded-xl px-7 py-4">
         <h1 className="text-2xl font-semibold mb-2">
           Cancel Anytime - No Minimum Term
         </h1>
         <div className="flex items-center mb-2">
           <img className="w-6 h-6" src={tiklogo} alt="" />
-          <p className="mx-3">
+          <p className="mx-3 text-justify">
             <small>
               <span className="font-semibold">
                 Cancel within 30 days to get a full refund -
@@ -216,7 +219,7 @@ const Three = ({ next, previus }) => {
         </div>
         <div className="flex items-center mb-2">
           <img className="w-6 h-6" src={tiklogo} alt="" />
-          <p className="mx-3">
+          <p className="mx-3 text-justify">
             <small>
               <span className="font-semibold">No commitments -</span> Stay on
               the program for as short or as long as you want.
@@ -225,7 +228,7 @@ const Three = ({ next, previus }) => {
         </div>
         <div className="flex items-center mb-2">
           <img className="w-6 h-6" src={tiklogo} alt="" />
-          <p className="mx-3">
+          <p className="mx-3 text-justify">
             <small>
               <span className="font-semibold">No Contracts</span> - You are not
               obliged to complete the program

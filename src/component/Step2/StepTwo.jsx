@@ -15,13 +15,14 @@ const StepTwo = ({ next }) => {
 
   const onSubmit = (data) => {
     console.log(data);
-    const jsonData = JSON.stringify(data)
-    localStorage.setItem("setp Two value",jsonData)
+    const jsonData = JSON.stringify(data);
+    localStorage.setItem("setp Two value", jsonData);
     next();
   };
 
   return (
     <div className="w-full p-3 bg-[#FDFDFD] rounded lg:h-[100vh]">
+      {/* title here  */}
       <div className="flex justify-start font-semibold p-4">
         <p className="text-[#D9D9D9] px-5">Step 1</p>
         <p className="font-bold px-5">Step 2</p>
@@ -29,6 +30,7 @@ const StepTwo = ({ next }) => {
         <p className="text-[#D9D9D9] ">Step 4</p>
       </div>
       <hr />
+      {/* password input form here  */}
       <form onSubmit={handleSubmit(onSubmit)} className="px-8 pt-6 pb-8 mb-4">
         <h1 className="mb-5 text-2xl font-semibold">Create a Password</h1>
         <div className="mb-4">
@@ -89,6 +91,7 @@ const StepTwo = ({ next }) => {
             )}
           />
         </div>
+        {/* submit button here  */}
         <div className="mt-96">
           <button
             className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

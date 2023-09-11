@@ -7,7 +7,7 @@ const User = ({user}) => {
       <img className="h-12 w-12" src={img} alt="" />
       <div className="mx-4">
         <h1 className="font-semibold text-xl text-[#0967AF]" >{name}</h1>
-        <p>{des}</p>
+        <p className="text-justify">{des}</p>
         <p className="font-semibold">TimeZone: {time}</p>
       </div>
     </div>
