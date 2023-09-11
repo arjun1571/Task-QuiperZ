@@ -30,7 +30,7 @@ const StepTwo = ({ next }) => {
               required: "Password is required",
               minLength: {
                 value: 8,
-                message: "Password must be at least 6 characters",
+                message: "Password must be at least 8  characters",
               },
               validate: {
                 hasLowerCase: (value) => hasLowerCase(value) || "Password must contain at least one lowercase letter",

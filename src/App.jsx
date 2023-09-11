@@ -12,6 +12,9 @@ function App() {
   const nextStep = () => {
     setFormNo(formNO + 1);
   };
+  const previus = () => {
+    setFormNo(formNO - 1);
+  };
   return (
     <div className=" lg:max-w-screen-2xl mx-auto lg:px-32 lg:py-20 md:p-8 lg:bg-[#E7E7E7] text-[#333333]">
       <div className="md:flex">
@@ -35,9 +38,8 @@ function App() {
             <img className="w-6 h-6" src={tiklogo} alt="" />
             <p className="mx-3">
               <small>
-                <span className="font-semibold">Structured online program</span>{" "}
-                with 8 comprehensive modules and over 50 thought-provoking
-                exercises
+                <span className="font-semibold">Developed by Dr. Stanton Peele</span>{" "}
+                the world leading authority on non-12 step addiction recovery
               </small>
             </p>
           </div>
@@ -45,9 +47,8 @@ function App() {
             <img className="w-6 h-6" src={tiklogo} alt="" />
             <p className="mx-3">
               <small>
-                <span className="font-semibold">Structured online program</span>{" "}
-                with 8 comprehensive modules and over 50 thought-provoking
-                exercises
+                <span className="font-semibold">Private video coaching</span>{" "}
+                option to schedule one-to-one coaching through our secure online video conferencing application
               </small>
             </p>
           </div>
@@ -55,9 +56,8 @@ function App() {
             <img className="w-6 h-6" src={tiklogo} alt="" />
             <p className="mx-3">
               <small>
-                <span className="font-semibold">Structured online program</span>{" "}
-                with 8 comprehensive modules and over 50 thought-provoking
-                exercises
+                <span className="font-semibold">Life Story Journaling </span>{" "}
+                reflect on the journey that you have travelled through life to bring you to where you are today
               </small>
             </p>
           </div>
@@ -65,9 +65,8 @@ function App() {
             <img className="w-6 h-6" src={tiklogo} alt="" />
             <p className="mx-3">
               <small>
-                <span className="font-semibold">Structured online program</span>{" "}
-                with 8 comprehensive modules and over 50 thought-provoking
-                exercises
+                <span className="font-semibold">Risk-Free 30 Day Trial</span>{" "}
+                to try the ENTIRE program so you can decide for yourself if it is for you
               </small>
             </p>
           </div>
@@ -75,7 +74,7 @@ function App() {
         <div className="md:w-1/2">
           {formNO === 1 && <StepOne next={nextStep}></StepOne>}
           {formNO === 2 && <StepTwo next={nextStep}></StepTwo>}
-          {formNO === 3 && <Three next={nextStep}></Three>}
+          {formNO === 3 && <Three next={nextStep} previus={previus}></Three>}
           {formNO === 4 && <Four next={nextStep}></Four>}
         </div>
       </div>
