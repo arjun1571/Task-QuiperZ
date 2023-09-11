@@ -15,6 +15,8 @@ const StepTwo = ({ next }) => {
 
   const onSubmit = (data) => {
     console.log(data);
+    const jsonData = JSON.stringify(data)
+    localStorage.setItem("setp Two value",jsonData)
     next();
   };
 

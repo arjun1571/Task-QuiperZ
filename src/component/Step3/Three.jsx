@@ -73,6 +73,8 @@ const Three = ({ next, previus }) => {
 
       // Console log the user's input
       console.log("User Input:", formData);
+      const jsonData = JSON.stringify(formData)
+      localStorage.setItem("setp Three value",jsonData)
     } else {
       // Handle validation errors
       console.log("Form contains errors");
