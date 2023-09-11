@@ -19,7 +19,7 @@ function App() {
     <div className=" lg:max-w-screen-2xl mx-auto lg:px-32 lg:py-20 md:p-8 md:bg-[#E7E7E7] text-[#333333]">
       <div className="md:flex">
         {/* left side text in here  */}
-        <div className="border lg:h-[100vh] md:p-8 p-5 bg-[#E6F0F6] shadow-2xl rounded-lg md:w-1/2 ">
+        <div className="border lg:h-[100vh] md:p-8 p-5 bg-[#E6F0F6] shadow-2xl rounded-lg md:w-1/2 md:mr-3">
           <h1 className="text-3xl font-semibold">
             Self Help Basic ($29/month)
           </h1>
