@@ -2,20 +2,31 @@ import React from "react";
 import { useForm, Controller } from "react-hook-form";
 
 const StepTwo = ({ next }) => {
-  const { control, handleSubmit, formState: { errors } } = useForm();
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const hasLowerCase = (value) => /[a-z]/.test(value);
   const hasUpperCase = (value) => /[A-Z]/.test(value);
-  const hasSpecialCharacter = (value) => /[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(value);
+  const hasSpecialCharacter = (value) =>
+    /[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(value);
 
   const onSubmit = (data) => {
-    
     console.log(data);
-    next(); 
+    next();
   };
 
   return (
-    <div className="w-full p-3 bg-[#FDFDFD] rounded lg:h-[700px]">
+    <div className="w-full p-3 bg-[#FDFDFD] rounded lg:h-[100vh]">
+      <div className="flex justify-start font-semibold p-4">
+        <p className="text-[#D9D9D9] px-5">Step 1</p>
+        <p className="font-bold px-5">Step 2</p>
+        <p className="text-[#D9D9D9] px-5">Step 3</p>
+        <p className="text-[#D9D9D9] ">Step 4</p>
+      </div>
+      <hr />
       <form onSubmit={handleSubmit(onSubmit)} className="px-8 pt-6 pb-8 mb-4">
         <h1 className="mb-5 text-2xl font-semibold">Create a Password</h1>
         <div className="mb-4">
@@ -33,9 +44,15 @@ const StepTwo = ({ next }) => {
                 message: "Password must be at least 8  characters",
               },
               validate: {
-                hasLowerCase: (value) => hasLowerCase(value) || "Password must contain at least one lowercase letter",
-                hasUpperCase: (value) => hasUpperCase(value) || "Password must contain at least one uppercase letter",
-                hasSpecialCharacter: (value) => hasSpecialCharacter(value) || "Password must contain at least one special character",
+                hasLowerCase: (value) =>
+                  hasLowerCase(value) ||
+                  "Password must contain at least one lowercase letter",
+                hasUpperCase: (value) =>
+                  hasUpperCase(value) ||
+                  "Password must contain at least one uppercase letter",
+                hasSpecialCharacter: (value) =>
+                  hasSpecialCharacter(value) ||
+                  "Password must contain at least one special character",
               },
             }}
             render={({ field }) => (
@@ -48,13 +65,19 @@ const StepTwo = ({ next }) => {
                 />
                 <div>
                   {errors.password?.hasLowerCase && (
-                    <p className="text-red-600">{errors.password.hasLowerCase}</p>
+                    <p className="text-red-600">
+                      {errors.password.hasLowerCase}
+                    </p>
                   )}
                   {errors.password?.hasUpperCase && (
-                    <p className="text-red-600">{errors.password.hasUpperCase}</p>
+                    <p className="text-red-600">
+                      {errors.password.hasUpperCase}
+                    </p>
                   )}
                   {errors.password?.hasSpecialCharacter && (
-                    <p className="text-red-600">{errors.password.hasSpecialCharacter}</p>
+                    <p className="text-red-600">
+                      {errors.password.hasSpecialCharacter}
+                    </p>
                   )}
                   {errors.password?.message && (
                     <p className="text-red-600">{errors.password.message}</p>

@@ -24,7 +24,14 @@ const StepOne = ({ next }) => {
   };
 
   return (
-    <div className="w-full p-3 bg-[#FDFDFD] rounded lg:h-[700px]">
+    <div className="w-full p-3 bg-[#FDFDFD] rounded lg:h-[100vh]">
+                   <div className='flex justify-start font-semibold p-4'>
+                <p className='font-bold px-5'>Step 1</p>
+                <p className='text-[#D9D9D9] px-5'>Step 2</p>
+                <p className='text-[#D9D9D9] px-5'>Step 3</p>
+                <p className='text-[#D9D9D9] '>Step 4</p>
+            </div>
+            <hr />
       <form onSubmit={handleSubmit(onSubmit)} className="px-8 pt-6 pb-8 mb-4">
         <h1 className="mb-5 text-2xl font-semibold">Contact Information</h1>
         <div className="mb-4">

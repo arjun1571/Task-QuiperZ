@@ -80,7 +80,14 @@ const Three = ({ next, previus }) => {
   };
 
   return (
-    <div className="w-full p-3 bg-[#FDFDFD] rounded lg:h-[700px]">
+    <div className="w-full p-3 bg-[#FDFDFD] rounded lg:h-[100vh]">
+      <div className="flex justify-start font-semibold p-4">
+        <p className="text-[#D9D9D9] px-5">Step 1</p>
+        <p className="text-[#D9D9D9] px-5">Step 2</p>
+        <p className=" font-bold px-5">Step 3</p>
+        <p className="text-[#D9D9D9] ">Step 4</p>
+      </div>
+      <hr />
       <form className="px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
         <h1 className="mb-5 text-2xl font-semibold">
           Payment Setup ($29/month)
@@ -171,7 +178,7 @@ const Three = ({ next, previus }) => {
             )}
           </div>
         </div>
-        <div className="mt-20 flex">
+        <div className="mt-10 flex">
           <button
             onClick={previus}
             className="w-full mr-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -191,13 +198,17 @@ const Three = ({ next, previus }) => {
         </div>
       </form>
       <div className="lg:mx-12 bg-[#E6F0F6] rounded-xl px-7 py-4">
-        <h1 className="text-2xl font-semibold mb-2">Cancel Anytime - No Minimum Term</h1>
+        <h1 className="text-2xl font-semibold mb-2">
+          Cancel Anytime - No Minimum Term
+        </h1>
         <div className="flex items-center mb-2">
           <img className="w-6 h-6" src={tiklogo} alt="" />
           <p className="mx-3">
             <small>
-              <span className="font-semibold">Cancel within 30 days to get a full refund -</span>{" "}
-              Hassle Free.No questions asked. 
+              <span className="font-semibold">
+                Cancel within 30 days to get a full refund -
+              </span>{" "}
+              Hassle Free.No questions asked.
             </small>
           </p>
         </div>
@@ -205,8 +216,8 @@ const Three = ({ next, previus }) => {
           <img className="w-6 h-6" src={tiklogo} alt="" />
           <p className="mx-3">
             <small>
-              <span className="font-semibold">No commitments -</span>{" "}
-              Stay on the program for as short or as long as you want. 
+              <span className="font-semibold">No commitments -</span> Stay on
+              the program for as short or as long as you want.
             </small>
           </p>
         </div>
@@ -214,8 +225,8 @@ const Three = ({ next, previus }) => {
           <img className="w-6 h-6" src={tiklogo} alt="" />
           <p className="mx-3">
             <small>
-              <span className="font-semibold">No Contracts</span>{" "}
-              -  You are not obliged to complete the program
+              <span className="font-semibold">No Contracts</span> - You are not
+              obliged to complete the program
             </small>
           </p>
         </div>
