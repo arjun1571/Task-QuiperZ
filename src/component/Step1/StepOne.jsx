@@ -11,6 +11,8 @@ const StepOne = ({ next }) => {
   const onSubmit = (data) => {
     if (radioChecked1 && radioChecked2) {
       console.log(data);
+      const jsonData = JSON.stringify(data)
+      localStorage.setItem("setp one value",jsonData)
       next(); 
     }
   };
